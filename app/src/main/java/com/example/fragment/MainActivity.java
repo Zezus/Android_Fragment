@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BlankFragment.Callback {
 
     private Boolean isFirstFragmentShowing = true;
 
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+    @Override
     public void changeFragmentClicked(View view) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
